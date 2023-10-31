@@ -1,3 +1,3 @@
-const nickname = null
-const firstname = null
+const nickname = "Timmy"
+const firstname = "Timothy"
 console.log(`Good Morning ${nickname ? nickname : firstname || "!"}`)
