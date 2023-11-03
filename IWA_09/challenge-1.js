@@ -1,6 +1,6 @@
 const salary = 4000
 const lodging = "apartment"
-const size = "large"
+const size = "small"
 
 // Only change the syntax below (not the values or key names)
 
@@ -22,7 +22,7 @@ const rent = {
   "small-room": 200,
   "large-room": 300,
   "small-apartment": 400,
-  [`${size}-${lodging}`]: 800,
+  "large-apartment": 800,
   "small-house": 1200,
   "large-house": 2400,
 }
@@ -31,10 +31,7 @@ const rent = {
 const taxAsDecimal = parseInt(tax[913]) / 100
 
 const startingAfterTax = salary - salary * taxAsDecimal
-
+const type = `${size}-${lodging}`
 const balance =
-  startingAfterTax -
-  expenses.transport -
-  expenses.food -
-  rent["large-apartment"]
+  startingAfterTax - expenses.transport - expenses.food - rent[type]
 console.log(balance.toFixed(2))
