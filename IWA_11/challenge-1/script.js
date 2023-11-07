@@ -38,16 +38,16 @@ biscuits1.innerText = root1.getAttribute("data-biscuits")
 donuts1.innerText = root1.getAttribute("data-donuts")
 pancakes1.innerText = root1.getAttribute("data-pancakes")
 status1.innerText =
-  root1.getAttribute("data-delivered") === true ? "Delivered" : "Pending"
+  root1.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending"
 
 biscuits2.innerText = root2.getAttribute("data-biscuits")
 donuts2.innerText = root2.getAttribute("data-donuts")
 pancakes2.innerText = root2.getAttribute("data-pancakes")
 status2.innerText =
-  root2.getAttribute("data-delivered") === true ? "Delivered" : "Pending"
+  root2.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending"
 
 biscuits3.innerText = root3.getAttribute("data-biscuits")
 donuts3.innerText = root3.getAttribute("data-donuts")
 pancakes3.innerText = root3.getAttribute("data-pancakes")
 status3.innerText =
-  root3.getAttribute("data-delivered") === true ? "Delivered" : "Pending"
+  root3.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending"
