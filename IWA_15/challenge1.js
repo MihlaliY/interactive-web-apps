@@ -18,24 +18,37 @@ const result = []
 
 const extractBiggest = () => {
   if (
-    first.length > 0 &&
     first[first.length - 1] > second[second.length - 1] &&
     first[first.length - 1] > third[third.length - 1]
   ) {
     return first.pop()
-  }
-  if (
-    second.length > 0 &&
-    second[second.length - 1] > first[first.length - 1] &&
+  } else if (
+    first[first.length - 1] === undefined &&
     second[second.length - 1] > third[third.length - 1]
   ) {
     return second.pop()
   }
 
   if (
-    third.length > 0 &&
+    second[second.length - 1] > first[first.length - 1] &&
+    second[second.length - 1] > third[third.length - 1]
+  ) {
+    return second.pop()
+  } else if (
+    first[first.length - 1] === undefined &&
+    second[second.length - 1] > third[third.length - 1]
+  ) {
+    return second.pop()
+  }
+
+  if (
     third[third.length - 1] > first[first.length - 1] &&
     third[third.length - 1] > second[second.length - 1]
+  ) {
+    return third.pop()
+  } else if (
+    first[first.length - 1] === undefined &&
+    second[second.length - 1] === undefined
   ) {
     return third.pop()
   }
